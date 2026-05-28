@@ -41,6 +41,7 @@
     "postcss": "^8.5.0",
     "eslint": "^9.0.0",
     "eslint-config-next": "^15.3.0",
+    "@eslint/eslintrc": "^3.0.0",
     "@cloudflare/next-on-pages": "^1.13.0",
     "wrangler": "^3.0.0",
     "@types/nodemailer": "^6.4.0"

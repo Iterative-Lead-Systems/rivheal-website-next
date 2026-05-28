@@ -204,7 +204,7 @@ export default function RequestDemoPage() {
 
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-1.5">
-                      Anything specific you'd like to see?{" "}
+                      Anything specific you&apos;d like to see?{" "}
                       <span className="text-muted-foreground font-normal">(optional)</span>
                     </label>
                     <textarea

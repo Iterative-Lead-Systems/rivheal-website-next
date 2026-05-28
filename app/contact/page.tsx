@@ -117,7 +117,7 @@ export default function ContactPage() {
                     <Send className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-display font-semibold text-foreground mb-2">Message Received</h3>
-                  <p className="text-muted-foreground mb-6">We'll respond within 24 hours.</p>
+                  <p className="text-muted-foreground mb-6">We&apos;ll respond within 24 hours.</p>
                   <button
                     onClick={() => setSent(false)}
                     className="px-5 py-2.5 rounded-xl text-sm font-medium border border-primary/30 text-primary hover:bg-primary/5 transition-colors"
