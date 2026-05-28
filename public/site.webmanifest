@@ -1,0 +1,17 @@
+{
+  "name": "RivHeal — Nigerian Healthcare Platform",
+  "short_name": "RivHeal",
+  "description": "Smart appointments, live queue tracking, digital records, telemedicine & emergency network for Nigeria.",
+  "icons": [
+    {
+      "src": "/rivheal.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
+  "display": "browser",
+  "scope": "/",
+  "start_url": "/"
+}

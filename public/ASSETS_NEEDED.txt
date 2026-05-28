@@ -1,0 +1,17 @@
+Assets to copy manually from the original project:
+
+1. rivheal.png
+   Source: /Users/bolade/Desktop/workspace/rivheal/rivheal-website/public/rivheal.png
+   Destination: /Users/bolade/Desktop/workspace/rivheal/rivheal-website-next/public/rivheal.png
+   Used as: favicon, apple icon, logo image, og-image fallback
+
+2. og-image.png (create/design a 1200x630 branded image)
+   Destination: /Users/bolade/Desktop/workspace/rivheal/rivheal-website-next/public/og-image.png
+   Used as: Open Graph social preview image
+
+3. site.webmanifest (optional)
+   Destination: /Users/bolade/Desktop/workspace/rivheal/rivheal-website-next/public/site.webmanifest
+
+Copy command:
+  cp /Users/bolade/Desktop/workspace/rivheal/rivheal-website/public/rivheal.png \
+     /Users/bolade/Desktop/workspace/rivheal/rivheal-website-next/public/rivheal.png
