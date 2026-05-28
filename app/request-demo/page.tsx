@@ -48,7 +48,7 @@ export default function RequestDemoPage() {
   const onSubmit = async (data: FormValues) => {
     setSubmitting(true);
     try {
-      const res = await fetch("/api/demo-request", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/website/demo-request`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
