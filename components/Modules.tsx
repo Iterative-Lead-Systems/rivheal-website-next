@@ -8,7 +8,7 @@ const modules = [
     title: "Patient Experience",
     description:
       "Smart appointments, live queue management, and digital medical records — all in one place for every patient.",
-    image: "/images/solutions/patient-experience.jpg",
+    image: "/images/solutions/patient-experience.png",
     alt: "Patient using RivHeal mobile app to book an appointment",
     accent: "bg-primary/10 text-primary",
   },
@@ -16,7 +16,7 @@ const modules = [
     title: "Hospital Admin",
     description:
       "Operational intelligence, resource management, and revenue analytics for healthcare facilities of any size.",
-    image: "/images/solutions/hospital-admin.jpg",
+    image: "/images/solutions/hospital-admin.png",
     alt: "Hospital administrator reviewing RivHeal dashboard on a desktop",
     accent: "bg-accent/10 text-accent",
   },
@@ -24,7 +24,7 @@ const modules = [
     title: "Emergency Network",
     description:
       "Real-time ER capacity dashboard and smart ambulance routing for critical care situations across Lagos.",
-    image: "/images/solutions/emergency-network.jpg",
+    image: "/images/solutions/emergency-network.png",
     alt: "Emergency response team coordinating via RivHeal emergency network",
     accent: "bg-secondary/10 text-secondary",
   },
@@ -32,7 +32,7 @@ const modules = [
     title: "Home Care",
     description:
       "On-demand healthcare at your doorstep with verified, credentialed practitioners available 24/7.",
-    image: "/images/solutions/home-care.jpg",
+    image: "/images/solutions/home-care.png",
     alt: "Home care nurse visiting a patient at home through RivHeal platform",
     accent: "bg-primary/10 text-primary",
   },
@@ -55,7 +55,7 @@ function SolutionImage({ src, alt, accent }: { src: string; alt: string; accent:
       {/* Fallback shown under the image (visible when image fails/missing) */}
       <div className={`absolute inset-0 flex items-center justify-center text-sm font-medium ${accent} -z-0`}>
         {/* TODO: Replace with a real image — see public/images/solutions/IMAGES_NEEDED.md */}
-        Image coming soon
+        {/* Image coming soon */}
       </div>
     </div>
   );
