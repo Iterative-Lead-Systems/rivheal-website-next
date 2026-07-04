@@ -48,16 +48,21 @@ export default function RequestDemoPage() {
   const onSubmit = async (data: FormValues) => {
     setSubmitting(true);
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/website/demo-request`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/website/demo-request`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        },
+      );
       if (!res.ok) throw new Error("Failed");
       setSent(true);
-      toast.success("Demo request received! Our team will reach you within 24 hours.");
+      toast.success(
+        "Demo request received! Our team will reach you within 24 hours.",
+      );
     } catch {
-      toast.error("Something went wrong. Please try emailing hello@rivheal.com");
+      toast.error("Something went wrong. Please try emailing info@rivheal.com");
     } finally {
       setSubmitting(false);
     }
@@ -78,7 +83,8 @@ export default function RequestDemoPage() {
               Request a Free Demo
             </h1>
             <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-              See how RivHeal can transform your hospital or clinic. Our team will walk you through a personalised demonstration.
+              See how RivHeal can transform your hospital or clinic. Our team
+              will walk you through a personalised demonstration.
             </p>
           </div>
 
@@ -86,7 +92,9 @@ export default function RequestDemoPage() {
             {/* Benefits sidebar */}
             <aside className="lg:col-span-2 space-y-6">
               <div className="bg-gradient-primary rounded-2xl p-6 text-primary-foreground shadow-elevated">
-                <h2 className="font-display font-semibold text-lg mb-5">What you get</h2>
+                <h2 className="font-display font-semibold text-lg mb-5">
+                  What you get
+                </h2>
                 <ul className="space-y-3">
                   {benefits.map((b) => (
                     <li key={b} className="flex items-start gap-3 text-sm">
@@ -108,7 +116,9 @@ export default function RequestDemoPage() {
                     className="bg-gradient-card border border-primary/10 rounded-xl p-3 text-center shadow-soft"
                   >
                     <Icon className="w-5 h-5 text-primary mx-auto mb-1.5" />
-                    <p className="text-xs font-semibold text-foreground whitespace-pre-line">{label}</p>
+                    <p className="text-xs font-semibold text-foreground whitespace-pre-line">
+                      {label}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -125,7 +135,9 @@ export default function RequestDemoPage() {
                     Request Received!
                   </h3>
                   <p className="text-muted-foreground max-w-sm mx-auto">
-                    A member of our team will contact you within <strong>24 hours</strong> to schedule your personalised demo.
+                    A member of our team will contact you within{" "}
+                    <strong>24 hours</strong> to schedule your personalised
+                    demo.
                   </p>
                 </div>
               ) : (
@@ -136,14 +148,19 @@ export default function RequestDemoPage() {
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div className="sm:col-span-2">
                       <label className="block text-sm font-medium text-foreground mb-1.5">
-                        Hospital / Clinic Name <span className="text-secondary">*</span>
+                        Hospital / Clinic Name{" "}
+                        <span className="text-secondary">*</span>
                       </label>
                       <input
                         {...register("hospitalName")}
                         placeholder="Lagos Island General Hospital"
                         className="w-full px-4 py-2.5 rounded-xl border border-input bg-background text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition"
                       />
-                      {errors.hospitalName && <p className="mt-1 text-xs text-secondary">{errors.hospitalName.message}</p>}
+                      {errors.hospitalName && (
+                        <p className="mt-1 text-xs text-secondary">
+                          {errors.hospitalName.message}
+                        </p>
+                      )}
                     </div>
 
                     <div>
@@ -155,7 +172,11 @@ export default function RequestDemoPage() {
                         placeholder="Dr. Emeka Nwosu"
                         className="w-full px-4 py-2.5 rounded-xl border border-input bg-background text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition"
                       />
-                      {errors.contactPerson && <p className="mt-1 text-xs text-secondary">{errors.contactPerson.message}</p>}
+                      {errors.contactPerson && (
+                        <p className="mt-1 text-xs text-secondary">
+                          {errors.contactPerson.message}
+                        </p>
+                      )}
                     </div>
 
                     <div>
@@ -168,7 +189,11 @@ export default function RequestDemoPage() {
                         placeholder="emeka@hospital.ng"
                         className="w-full px-4 py-2.5 rounded-xl border border-input bg-background text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition"
                       />
-                      {errors.email && <p className="mt-1 text-xs text-secondary">{errors.email.message}</p>}
+                      {errors.email && (
+                        <p className="mt-1 text-xs text-secondary">
+                          {errors.email.message}
+                        </p>
+                      )}
                     </div>
 
                     <div>
@@ -181,31 +206,46 @@ export default function RequestDemoPage() {
                         placeholder="+234 801 000 0000"
                         className="w-full px-4 py-2.5 rounded-xl border border-input bg-background text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition"
                       />
-                      {errors.phone && <p className="mt-1 text-xs text-secondary">{errors.phone.message}</p>}
+                      {errors.phone && (
+                        <p className="mt-1 text-xs text-secondary">
+                          {errors.phone.message}
+                        </p>
+                      )}
                     </div>
 
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-1.5">
-                        Number of Doctors / Staff <span className="text-secondary">*</span>
+                        Number of Doctors / Staff{" "}
+                        <span className="text-secondary">*</span>
                       </label>
                       <select
                         {...register("staffCount")}
                         className="w-full px-4 py-2.5 rounded-xl border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring transition"
                         defaultValue=""
                       >
-                        <option value="" disabled>Select range</option>
+                        <option value="" disabled>
+                          Select range
+                        </option>
                         {staffOptions.map((o) => (
-                          <option key={o} value={o}>{o}</option>
+                          <option key={o} value={o}>
+                            {o}
+                          </option>
                         ))}
                       </select>
-                      {errors.staffCount && <p className="mt-1 text-xs text-secondary">{errors.staffCount.message}</p>}
+                      {errors.staffCount && (
+                        <p className="mt-1 text-xs text-secondary">
+                          {errors.staffCount.message}
+                        </p>
+                      )}
                     </div>
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-1.5">
                       Anything specific you&apos;d like to see?{" "}
-                      <span className="text-muted-foreground font-normal">(optional)</span>
+                      <span className="text-muted-foreground font-normal">
+                        (optional)
+                      </span>
                     </label>
                     <textarea
                       {...register("message")}
@@ -224,7 +264,8 @@ export default function RequestDemoPage() {
                   </button>
 
                   <p className="text-xs text-center text-muted-foreground">
-                    No commitment. No credit card. A real person will follow up within 24 hours.
+                    No commitment. No credit card. A real person will follow up
+                    within 24 hours.
                   </p>
                 </form>
               )}

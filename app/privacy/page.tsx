@@ -4,7 +4,8 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "How RivHeal collects, uses, and protects your personal and health data in compliance with Nigeria's NDPR.",
+  description:
+    "How RivHeal collects, uses, and protects your personal and health data in compliance with Nigeria's NDPR.",
 };
 
 const sections = [
@@ -12,7 +13,7 @@ const sections = [
     title: "1. Who We Are",
     content: `RivHeal Technology Limited ("RivHeal", "we", "us", "our") is a health-technology company incorporated in Nigeria, operating from Lagos, Nigeria. We provide a digital platform that connects patients, hospitals, and healthcare practitioners.
 
-Contact: hello@rivheal.com`,
+Contact: info@rivheal.com`,
   },
   {
     title: "2. Data We Collect",
@@ -105,14 +106,20 @@ export default function PrivacyPage() {
       <main className="pt-28 pb-20 px-4">
         <div className="container mx-auto max-w-3xl">
           <div className="mb-10">
-            <h1 className="text-4xl font-display font-bold text-foreground mb-3">Privacy Policy</h1>
-            <p className="text-muted-foreground">Last updated: 1 January 2026 · NDPR & NDPA 2023 compliant</p>
+            <h1 className="text-4xl font-display font-bold text-foreground mb-3">
+              Privacy Policy
+            </h1>
+            <p className="text-muted-foreground">
+              Last updated: 1 January 2026 · NDPR & NDPA 2023 compliant
+            </p>
           </div>
 
           <div className="bg-gradient-card border border-primary/10 rounded-2xl shadow-soft divide-y divide-border">
             {sections.map((section) => (
               <div key={section.title} className="px-8 py-7">
-                <h2 className="text-lg font-display font-semibold text-foreground mb-3">{section.title}</h2>
+                <h2 className="text-lg font-display font-semibold text-foreground mb-3">
+                  {section.title}
+                </h2>
                 <div className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
                   {section.content.split("**").map((part, i) =>
                     i % 2 === 1 ? (
@@ -121,7 +128,7 @@ export default function PrivacyPage() {
                       </strong>
                     ) : (
                       part
-                    )
+                    ),
                   )}
                 </div>
               </div>

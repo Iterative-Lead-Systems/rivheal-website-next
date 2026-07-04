@@ -27,7 +27,8 @@ export default function Footer() {
               />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-              The operating system for Nigerian healthcare — connecting patients, hospitals, and practitioners on one platform.
+              The operating system for Nigerian healthcare — connecting
+              patients, hospitals, and practitioners on one platform.
             </p>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <MapPin className="w-4 h-4 shrink-0 text-primary" />
@@ -35,15 +36,20 @@ export default function Footer() {
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Mail className="w-4 h-4 shrink-0 text-primary" />
-              <a href="mailto:hello@rivheal.com" className="hover:text-foreground transition-colors">
-                hello@rivheal.com
+              <a
+                href="mailto:info@rivheal.com"
+                className="hover:text-foreground transition-colors"
+              >
+                info@rivheal.com
               </a>
             </div>
           </div>
 
           {/* Links column */}
           <div>
-            <h4 className="font-display font-semibold text-foreground mb-4">Navigation</h4>
+            <h4 className="font-display font-semibold text-foreground mb-4">
+              Navigation
+            </h4>
             <ul className="space-y-2">
               {footerLinks.map((link) => (
                 <li key={link.label}>
@@ -60,9 +66,12 @@ export default function Footer() {
 
           {/* CTA column */}
           <div>
-            <h4 className="font-display font-semibold text-foreground mb-4">For Healthcare Providers</h4>
+            <h4 className="font-display font-semibold text-foreground mb-4">
+              For Healthcare Providers
+            </h4>
             <p className="text-sm text-muted-foreground mb-4">
-              Ready to digitise your hospital or clinic? Book a personalised demo with our team.
+              Ready to digitise your hospital or clinic? Book a personalised
+              demo with our team.
             </p>
             <Link
               href="/request-demo"

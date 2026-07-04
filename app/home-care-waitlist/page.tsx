@@ -69,13 +69,13 @@ export default function HomeCareWaitlistPage() {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),
-        }
+        },
       );
       if (!res.ok) throw new Error("Failed");
       setSent(true);
       toast.success("Welcome to the waitlist! Check your email for updates.");
     } catch {
-      toast.error("Something went wrong. Please try emailing hello@rivheal.com");
+      toast.error("Something went wrong. Please try emailing info@rivheal.com");
     } finally {
       setSubmitting(false);
     }
@@ -93,10 +93,13 @@ export default function HomeCareWaitlistPage() {
               Coming Soon
             </div>
             <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
-              Healthcare at Home, <span className="text-secondary">Without the Wait</span>
+              Healthcare at Home,{" "}
+              <span className="text-secondary">Without the Wait</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Say goodbye to endless waiting rooms. RivHeal Home Care brings quality healthcare directly to your doorstep—connecting patients with medical practitioners who care.
+              Say goodbye to endless waiting rooms. RivHeal Home Care brings
+              quality healthcare directly to your doorstep—connecting patients
+              with medical practitioners who care.
             </p>
           </div>
 
@@ -110,7 +113,9 @@ export default function HomeCareWaitlistPage() {
                 <div className="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-7 h-7 text-secondary" />
                 </div>
-                <h3 className="font-display font-semibold text-foreground mb-2 text-lg">{title}</h3>
+                <h3 className="font-display font-semibold text-foreground mb-2 text-lg">
+                  {title}
+                </h3>
                 <p className="text-sm text-muted-foreground">{description}</p>
               </div>
             ))}
@@ -125,7 +130,9 @@ export default function HomeCareWaitlistPage() {
                   <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
-                  <h3 className="font-display font-bold text-xl">What You&apos;ll Get</h3>
+                  <h3 className="font-display font-bold text-xl">
+                    What You&apos;ll Get
+                  </h3>
                 </div>
                 <ul className="space-y-4">
                   {benefits.map((b) => (
@@ -133,7 +140,9 @@ export default function HomeCareWaitlistPage() {
                       <div className="w-5 h-5 rounded-full bg-white/30 flex items-center justify-center shrink-0 mt-1">
                         <div className="w-2 h-2 rounded-full bg-white" />
                       </div>
-                      <span className="text-sm font-medium leading-snug">{b}</span>
+                      <span className="text-sm font-medium leading-snug">
+                        {b}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -151,7 +160,9 @@ export default function HomeCareWaitlistPage() {
                     You&apos;re In!
                   </h3>
                   <p className="text-muted-foreground max-w-sm mx-auto mb-6">
-                    Thank you for joining the RivHeal Home Care waitlist. We&apos;ll email you with exclusive updates and launch details.
+                    Thank you for joining the RivHeal Home Care waitlist.
+                    We&apos;ll email you with exclusive updates and launch
+                    details.
                   </p>
                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 text-secondary text-sm font-medium">
                     <Heart className="w-4 h-4" />
@@ -193,18 +204,23 @@ export default function HomeCareWaitlistPage() {
                               : "border-input bg-background hover:border-primary hover:bg-primary/5"
                           }`}
                         >
-                          <Icon className={`w-6 h-6 mb-3 ${userType === value ? "text-primary" : "text-muted-foreground"}`} />
-                          <p className="text-foreground font-semibold text-sm leading-tight">{label}</p>
-                          <p className="text-xs text-muted-foreground mt-2">{description}</p>
+                          <Icon
+                            className={`w-6 h-6 mb-3 ${userType === value ? "text-primary" : "text-muted-foreground"}`}
+                          />
+                          <p className="text-foreground font-semibold text-sm leading-tight">
+                            {label}
+                          </p>
+                          <p className="text-xs text-muted-foreground mt-2">
+                            {description}
+                          </p>
                         </button>
                       ))}
                     </div>
-                    <input
-                      type="hidden"
-                      {...register("userType")}
-                    />
+                    <input type="hidden" {...register("userType")} />
                     {errors.userType && (
-                      <p className="mt-3 text-xs text-secondary font-medium">{errors.userType.message}</p>
+                      <p className="mt-3 text-xs text-secondary font-medium">
+                        {errors.userType.message}
+                      </p>
                     )}
                   </div>
 
@@ -220,7 +236,9 @@ export default function HomeCareWaitlistPage() {
                         className="w-full px-4 py-2.5 rounded-xl border border-input bg-background text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition"
                       />
                       {errors.fullName && (
-                        <p className="mt-1 text-xs text-secondary">{errors.fullName.message}</p>
+                        <p className="mt-1 text-xs text-secondary">
+                          {errors.fullName.message}
+                        </p>
                       )}
                     </div>
 
@@ -235,7 +253,9 @@ export default function HomeCareWaitlistPage() {
                         className="w-full px-4 py-2.5 rounded-xl border border-input bg-background text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition"
                       />
                       {errors.email && (
-                        <p className="mt-1 text-xs text-secondary">{errors.email.message}</p>
+                        <p className="mt-1 text-xs text-secondary">
+                          {errors.email.message}
+                        </p>
                       )}
                     </div>
 
@@ -250,7 +270,9 @@ export default function HomeCareWaitlistPage() {
                         className="w-full px-4 py-2.5 rounded-xl border border-input bg-background text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition"
                       />
                       {errors.phone && (
-                        <p className="mt-1 text-xs text-secondary">{errors.phone.message}</p>
+                        <p className="mt-1 text-xs text-secondary">
+                          {errors.phone.message}
+                        </p>
                       )}
                     </div>
                   </div>
@@ -258,7 +280,9 @@ export default function HomeCareWaitlistPage() {
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-1.5">
                       Tell us why you&apos;re interested{" "}
-                      <span className="text-muted-foreground font-normal">(optional)</span>
+                      <span className="text-muted-foreground font-normal">
+                        (optional)
+                      </span>
                     </label>
                     <textarea
                       {...register("reason")}
@@ -285,7 +309,8 @@ export default function HomeCareWaitlistPage() {
                   </button>
 
                   <p className="text-xs text-center text-muted-foreground">
-                    We&apos;ll only email you with product updates—no spam, ever.
+                    We&apos;ll only email you with product updates—no spam,
+                    ever.
                   </p>
                 </form>
               )}
