@@ -4,6 +4,7 @@ import TrustBar from "@/components/TrustBar";
 import Modules from "@/components/Modules";
 import Features from "@/components/Features";
 import Stats from "@/components/Stats";
+import HomeCareSection from "@/components/HomeCareSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <Modules />
       <Features />
       <Stats />
+      <HomeCareSection />
       <CTASection />
       <Footer />
     </div>
