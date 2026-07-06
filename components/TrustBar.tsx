@@ -1,9 +1,9 @@
 const trustItems = [
-  "Trusted by 12+ Hospitals",
-  "50,000+ Patients Served",
   "NDPR Compliant",
+  "Biometric Security",
+  "24/7 Available",
+  "Patient-Controlled Data",
   "SDG-3 Aligned",
-  "ISO 27001 Ready",
 ];
 
 export default function TrustBar() {

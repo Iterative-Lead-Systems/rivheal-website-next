@@ -24,7 +24,7 @@ export default function Hero() {
 
         {/* Subtitle */}
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up">
-          RivHeal gives hospitals and clinics a complete digital platform — from patient appointments and live queue management to emergency networks and homecare — purpose-built for Nigeria.
+          One app for every step of your healthcare journey: book appointments, track your queue in real time, manage your medical records across hospitals, and access emergency or home care when you need it.
         </p>
 
         {/* CTA Buttons */}
@@ -45,7 +45,7 @@ export default function Hero() {
 
         {/* Social proof micro-copy */}
         <p className="mt-6 text-sm text-muted-foreground animate-fade-in">
-          Trusted by hospitals in Lagos, Abuja &amp; Port Harcourt · No credit card required
+          Trusted by Nigerian patients nationwide · No credit card required
         </p>
       </div>
 
