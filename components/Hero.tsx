@@ -13,18 +13,18 @@ export default function Hero() {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 animate-fade-in">
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          Transforming Nigerian Healthcare
+          AI-Powered Healthcare
         </div>
 
         {/* Heading */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-foreground mb-6 leading-tight animate-fade-in-up">
-          The Operating System for
-          <span className="block text-gradient-primary">Nigerian Healthcare</span>
+          AI-Powered Healthcare
+          <span className="block text-gradient-primary">That Works for You</span>
         </h1>
 
         {/* Subtitle */}
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up">
-          One app for every step of your healthcare journey: book appointments, track your queue in real time, manage your medical records across hospitals, and access emergency or home care when you need it.
+          Smart appointments. Real-time queue tracking. AI health assistant. Digital medical records that follow you everywhere. All in one app designed for Nigerian patients.
         </p>
 
         {/* CTA Buttons */}

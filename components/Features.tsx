@@ -6,26 +6,26 @@ import { Calendar, Clock, FileText, Users } from "lucide-react";
 const features = [
   {
     icon: Calendar,
-    title: "Smart Booking",
-    description: "Book appointments in under 3 minutes",
+    title: "AI-Powered Booking",
+    description: "Smart appointments with AI-predicted best times for you",
     accent: "primary",
   },
   {
     icon: Clock,
-    title: "Live Queue",
-    description: "Real-time wait time predictions",
+    title: "Live Queue Intelligence",
+    description: "AI predicts wait times with 85%+ accuracy",
     accent: "secondary",
   },
   {
     icon: FileText,
-    title: "Digital Records",
-    description: "Your health data, your control",
+    title: "Portable Medical Records",
+    description: "Your health data, your control, across all hospitals",
     accent: "secondary",
   },
   {
     icon: Users,
-    title: "Family Health",
-    description: "Manage your entire family's care",
+    title: "AI Health Assistant",
+    description: "24/7 symptom checker in your language",
     accent: "primary",
   },
 ];
@@ -41,11 +41,11 @@ export default function Features() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-            Healthcare Made{" "}
-            <span className="text-secondary">Simple</span>
+            AI That{" "}
+            <span className="text-secondary">Understands You</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            Every feature designed around your needs.
+            Every feature powered by AI designed around your healthcare needs.
           </p>
         </motion.div>
 

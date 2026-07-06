@@ -7,7 +7,7 @@ const modules = [
   {
     title: "Patient Experience",
     description:
-      "Smart appointments, live queue management, and digital medical records — all in one place for every patient.",
+      "AI-powered appointments, live queue intelligence, AI health assistant, and digital medical records — all in one app.",
     image: "/images/solutions/patient-experience.png",
     alt: "Patient using RivHeal mobile app to book an appointment",
     accent: "bg-primary/10 text-primary",
@@ -15,7 +15,7 @@ const modules = [
   {
     title: "Hospital Admin",
     description:
-      "Operational intelligence, resource management, and revenue analytics for healthcare facilities of any size.",
+      "AI-driven operational intelligence, resource management, and revenue analytics for healthcare facilities.",
     image: "/images/solutions/hospital-admin.png",
     alt: "Hospital administrator reviewing RivHeal dashboard on a desktop",
     accent: "bg-accent/10 text-accent",
@@ -23,7 +23,7 @@ const modules = [
   {
     title: "Emergency Network",
     description:
-      "Real-time ER capacity dashboard and smart ambulance routing for critical care situations across Lagos.",
+      "AI-powered ER capacity prediction and smart ambulance routing for critical care situations across Nigeria.",
     image: "/images/solutions/emergency-network.png",
     alt: "Emergency response team coordinating via RivHeal emergency network",
     accent: "bg-secondary/10 text-secondary",
@@ -31,7 +31,7 @@ const modules = [
   {
     title: "Home Care",
     description:
-      "On-demand healthcare at your doorstep with verified, credentialed practitioners available 24/7.",
+      "On-demand healthcare at your doorstep with AI-verified practitioners available 24/7.",
     image: "/images/solutions/home-care.png",
     alt: "Home care nurse visiting a patient at home through RivHeal platform",
     accent: "bg-primary/10 text-primary",
@@ -72,10 +72,10 @@ export default function Modules() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-            Four Integrated Solutions
+            Four AI-Powered Solutions
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            A complete ecosystem connecting patients, hospitals, and healthcare providers across Nigeria.
+            A complete ecosystem connecting patients with the care they need, powered by intelligent systems.
           </p>
         </motion.div>
 
