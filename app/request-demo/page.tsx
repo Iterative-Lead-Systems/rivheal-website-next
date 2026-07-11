@@ -7,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { CheckCircle, Building2, Users, Stethoscope } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 const schema = z.object({
   hospitalName: z.string().min(2, "Hospital/clinic name is required"),
@@ -105,6 +105,7 @@ export default function RequestDemoPage() {
                 </ul>
               </div>
 
+              {/* Stats section - commented out
               <div className="grid grid-cols-3 gap-3">
                 {[
                   { icon: Building2, label: "12+\nHospitals" },
@@ -122,6 +123,7 @@ export default function RequestDemoPage() {
                   </div>
                 ))}
               </div>
+              */}
             </aside>
 
             {/* Form */}

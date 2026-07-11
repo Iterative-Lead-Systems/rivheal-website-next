@@ -25,11 +25,12 @@ export default function Header() {
             <Image
               src="/rivheal.png"
               alt="RivHeal"
-              width={120}
-              height={40}
-              className="h-8 w-auto object-contain"
+              width={32}
+              height={32}
+              className="h-8 w-8 object-contain"
               onError={() => {}}
             />
+            <span className="hidden sm:inline text-lg font-bold text-foreground">RivHeal</span>
           </div>
         </Link>
 

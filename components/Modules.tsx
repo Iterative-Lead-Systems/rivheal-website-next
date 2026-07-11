@@ -8,11 +8,11 @@ const modules = [
   {
     title: "Patient Experience",
     description:
-      "AI-powered appointments, live queue intelligence, AI health assistant, and digital medical records — all in one app.",
+      "Appointment management, live queue intelligence, AI health assistant, and digital medical records — all in one app.",
     image: "/images/solutions/patient-experience.png",
     alt: "Patient using RivHeal mobile app to book an appointment",
     accent: "bg-primary/10 text-primary",
-    href: "#join-waitlist",
+    href: "/patient-experience",
     isClickable: true,
   },
   {
@@ -38,7 +38,7 @@ const modules = [
   {
     title: "Home Care",
     description:
-      "On-demand healthcare at your doorstep with AI-verified practitioners available 24/7.",
+      "On-demand healthcare at your doorstep with verified practitioners available 24/7.",
     image: "/images/solutions/home-care.png",
     alt: "Home care nurse visiting a patient at home through RivHeal platform",
     accent: "bg-primary/10 text-primary",
