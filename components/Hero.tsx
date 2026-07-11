@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-
 export default function Hero() {
   return (
     <section className="pt-32 pb-20 px-4 relative overflow-hidden">
@@ -29,12 +27,12 @@ export default function Hero() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up">
-          <Link
-            href="/request-demo"
+          <a
+            href="#join-waitlist"
             className="px-8 py-4 rounded-xl text-base font-semibold bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity shadow-elevated"
           >
-            Request a Demo
-          </Link>
+            Join the Waitlist
+          </a>
           <a
             href="#modules"
             className="px-8 py-4 rounded-xl text-base font-semibold border-2 border-primary text-primary hover:bg-primary/5 transition-colors"

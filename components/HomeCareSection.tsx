@@ -73,7 +73,7 @@ export default function HomeCareSection() {
   };
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-transparent via-secondary/5 to-transparent">
+    <section id="join-waitlist" className="py-20 px-4 bg-gradient-to-b from-transparent via-secondary/5 to-transparent">
       <div className="container mx-auto max-w-6xl">
         {/* Heading */}
         <div className="text-center mb-16">
