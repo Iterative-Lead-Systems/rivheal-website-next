@@ -20,18 +20,19 @@ export default function Header() {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
+          {/* <Link href="/" className="flex items-center gap-2"> */}
           {/* TODO: add /public/rivheal.png — use text fallback until then */}
-          <div className="flex items-center gap-2">
-            <Image
-              src="/rivheal.png"
-              alt="RivHeal"
-              width={32}
-              height={32}
-              className="h-8 w-8 object-contain"
-              onError={() => {}}
-            />
-            <span className="hidden sm:inline text-lg font-bold text-foreground">RivHeal</span>
-          </div>
+          <Image
+            src="/rivheal.png"
+            alt="RivHeal"
+            width={499}
+            height={499}
+            // className="h-16 w-auto object-contain"
+            className="h-[100px] w-auto object-contain-m-2"
+            style={{ maxHeight: "none" }} // override any max-height
+            onError={() => {}}
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -63,7 +64,11 @@ export default function Header() {
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
-          {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {mobileOpen ? (
+            <X className="w-5 h-5" />
+          ) : (
+            <Menu className="w-5 h-5" />
+          )}
         </button>
       </div>
 
