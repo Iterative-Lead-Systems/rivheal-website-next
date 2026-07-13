@@ -3,14 +3,15 @@
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Clock, FileText, Users, Stethoscope, Activity, Share2, CheckCircle } from "lucide-react";
+import { Clock, FileText, Users, Stethoscope, Activity, Share2, CheckCircle, Smartphone } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const features = [
   {
     icon: Clock,
     title: "Smart Queue Management",
-    description: "See real-time wait times and book appointments at the best times. AI predicts queues with 85%+ accuracy so you're never caught off guard.",
+    description: "See real-time wait times and book appointments strategically. Know exactly when to go so you spend less time waiting in hospitals.",
   },
   {
     icon: FileText,
@@ -30,12 +31,12 @@ const features = [
   {
     icon: Stethoscope,
     title: "Tele-Consultation",
-    description: "Access quality healthcare from the comfort of your home. Connect with doctors via secure video consultations available 24/7.",
+    description: "Access quality healthcare from the comfort of your home. Connect with doctors via secure video consultations.",
   },
   {
     icon: Activity,
-    title: "AI Health Assistant",
-    description: "Get symptom guidance and health insights in your language. Our AI assistant helps you understand your health and when to seek care.",
+    title: "Health Insights",
+    description: "Get symptom guidance and personalized health insights in your language. Understand your health better and when to seek professional care.",
   },
 ];
 
@@ -91,6 +92,46 @@ export default function PatientExperiencePage() {
             })}
           </div>
 
+          {/* Mobile App Showcase */}
+          <motion.div
+            className="bg-gradient-card border border-primary/10 rounded-2xl p-8 md:p-12 mb-16 shadow-soft"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
+                <Smartphone className="w-6 h-6 text-primary-foreground" />
+              </div>
+              <h2 className="text-3xl font-display font-bold text-foreground">
+                Experience It on Your Phone
+              </h2>
+            </div>
+            <p className="text-muted-foreground mb-8 max-w-2xl">
+              Download the RivHeal app to start managing your healthcare in real-time. Available on iOS and Android.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                { title: "Book Appointments", desc: "Find the best time to visit your healthcare provider" },
+                { title: "Track Wait Times", desc: "Know exactly how long before you'll be seen" },
+                { title: "Access Medical Records", desc: "Your health history across all hospitals" },
+              ].map((item) => (
+                <div key={item.title} className="text-center">
+                  <div className="w-24 h-40 rounded-xl bg-muted mx-auto mb-4 flex items-center justify-center">
+                    <div className="text-sm text-muted-foreground">
+                      App screenshot
+                    </div>
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-muted-foreground text-center mt-8">
+              Replace screenshot placeholders with mobile app images. See <code>/public/images/MOBILE_APP_IMAGES.md</code> for details.
+            </p>
+          </motion.div>
+
           {/* Why Choose Section */}
           <motion.div
             className="bg-gradient-card border border-primary/10 rounded-2xl p-8 md:p-12 mb-16 shadow-soft"
@@ -129,10 +170,10 @@ export default function PatientExperiencePage() {
               Ready to Transform Your Healthcare?
             </h2>
             <p className="text-primary-foreground/80 text-lg max-w-xl mx-auto mb-8">
-              Join thousands of Nigerians who are taking control of their health with RivHeal.
+              Be among the first Nigerians to experience a smarter, faster healthcare system. Join our waitlist for early access.
             </p>
             <Link
-              href="#join-waitlist"
+              href="/home-care-waitlist"
               className="inline-block px-8 py-4 rounded-xl text-base font-semibold bg-gradient-warm text-primary-foreground hover:opacity-90 transition-opacity shadow-elevated"
             >
               Join the Waitlist Today →

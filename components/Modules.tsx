@@ -8,7 +8,7 @@ const modules = [
   {
     title: "Patient Experience",
     description:
-      "Appointment management, live queue intelligence, AI health assistant, and digital medical records — all in one app.",
+      "Appointment management, real-time queue tracking, health guidance, and digital medical records — all in one app.",
     image: "/images/solutions/patient-experience.png",
     alt: "Patient using RivHeal mobile app to book an appointment",
     accent: "bg-primary/10 text-primary",
@@ -18,7 +18,7 @@ const modules = [
   {
     title: "Hospital Admin",
     description:
-      "AI-driven operational intelligence, resource management, and revenue analytics for healthcare facilities.",
+      "Operational dashboards, resource management, and analytics for healthcare facilities.",
     image: "/images/solutions/hospital-admin.png",
     alt: "Hospital administrator reviewing RivHeal dashboard on a desktop",
     accent: "bg-accent/10 text-accent",
@@ -28,7 +28,7 @@ const modules = [
   {
     title: "Emergency Network",
     description:
-      "AI-powered ER capacity prediction and smart ambulance routing for critical care situations across Nigeria.",
+      "ER capacity tracking and smart ambulance routing for critical care situations across Nigeria.",
     image: "/images/solutions/emergency-network.png",
     alt: "Emergency response team coordinating via RivHeal emergency network",
     accent: "bg-secondary/10 text-secondary",
@@ -42,7 +42,7 @@ const modules = [
     image: "/images/solutions/home-care.png",
     alt: "Home care nurse visiting a patient at home through RivHeal platform",
     accent: "bg-primary/10 text-primary",
-    href: "#join-waitlist",
+    href: "/home-care-waitlist",
     isClickable: true,
   },
 ];
@@ -81,10 +81,10 @@ export default function Modules() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-            Four AI-Powered Solutions
+            Our Solutions
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            A complete ecosystem connecting patients with the care they need, powered by intelligent systems.
+            A complete ecosystem connecting patients with the care they need. For patients, hospitals, and emergency services.
           </p>
         </motion.div>
 

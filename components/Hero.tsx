@@ -11,24 +11,24 @@ export default function Hero() {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 animate-fade-in">
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          AI-Powered Healthcare
+          Coming Soon
         </div>
 
         {/* Heading */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-foreground mb-6 leading-tight animate-fade-in-up">
-          AI-Powered Healthcare
-          <span className="block text-gradient-primary">That Works for You</span>
+          Smarter Healthcare
+          <span className="block text-gradient-primary">In Your Hands</span>
         </h1>
 
         {/* Subtitle */}
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up">
-          Smart appointments. Real-time queue tracking. AI health assistant. Digital medical records that follow you everywhere. All in one app designed for Nigerian patients.
+          Smart appointments. Real-time queue tracking. Portable medical records. All in one app designed for Nigerian patients. Be among the first to experience it.
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up">
           <a
-            href="#join-waitlist"
+            href="/home-care-waitlist"
             className="px-8 py-4 rounded-xl text-base font-semibold bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity shadow-elevated"
           >
             Join the Waitlist
@@ -43,7 +43,7 @@ export default function Hero() {
 
         {/* Social proof micro-copy */}
         <p className="mt-6 text-sm text-muted-foreground animate-fade-in">
-          Trusted by Nigerian patients nationwide · No credit card required
+          Early access launching soon · No credit card required
         </p>
       </div>
 
