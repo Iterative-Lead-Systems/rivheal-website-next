@@ -9,6 +9,7 @@ const modules = [
     title: "Patient Experience",
     description:
       "Appointment management, real-time queue tracking, health guidance, and digital medical records — all in one app.",
+    badge: "AI-Powered Insights",
     image: "/images/solutions/patient-experience.png",
     alt: "Patient using RivHeal mobile app to book an appointment",
     accent: "bg-primary/10 text-primary",
@@ -19,6 +20,7 @@ const modules = [
     title: "Hospital Admin",
     description:
       "Operational dashboards, resource management, and analytics for healthcare facilities.",
+    badge: "Smart Analytics",
     image: "/images/solutions/hospital-admin.png",
     alt: "Hospital administrator reviewing RivHeal dashboard on a desktop",
     accent: "bg-accent/10 text-accent",
@@ -29,6 +31,7 @@ const modules = [
     title: "Emergency Network",
     description:
       "ER capacity tracking and smart ambulance routing for critical care situations across Nigeria.",
+    badge: "Predictive Intelligence",
     image: "/images/solutions/emergency-network.png",
     alt: "Emergency response team coordinating via RivHeal emergency network",
     accent: "bg-secondary/10 text-secondary",
@@ -93,9 +96,16 @@ export default function Modules() {
             const cardContent = (
               <>
                 <SolutionImage src={module.image} alt={module.alt} accent={module.accent} />
-                <h3 className="text-xl font-display font-semibold text-foreground mb-2">
-                  {module.title}
-                </h3>
+                <div className="flex items-start justify-between gap-2 mb-2">
+                  <h3 className="text-xl font-display font-semibold text-foreground flex-1">
+                    {module.title}
+                  </h3>
+                  {module.badge && (
+                    <span className="inline-flex items-center px-2 py-1 rounded-lg bg-primary/10 text-primary text-xs font-semibold whitespace-nowrap">
+                      ✨ {module.badge}
+                    </span>
+                  )}
+                </div>
                 <p className="text-muted-foreground text-sm leading-relaxed">{module.description}</p>
                 {module.comingSoon && (
                   <div className="mt-4 inline-block px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-medium">

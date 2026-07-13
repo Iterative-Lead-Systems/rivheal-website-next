@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Clock, FileText, Users, Stethoscope, Activity, Share2, CheckCircle, Smartphone } from "lucide-react";
+import { Clock, FileText, Users, Stethoscope, Activity, Share2, CheckCircle, Smartphone, Calendar, AlertCircle, BookOpen, MessageSquare, Video, Heart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -92,44 +92,118 @@ export default function PatientExperiencePage() {
             })}
           </div>
 
-          {/* Mobile App Showcase */}
+          {/* Mobile App Showcase - World Class */}
           <motion.div
-            className="bg-gradient-card border border-primary/10 rounded-2xl p-8 md:p-12 mb-16 shadow-soft"
+            className="mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
-                <Smartphone className="w-6 h-6 text-primary-foreground" />
+            <div className="flex items-center gap-3 mb-12 justify-center">
+              <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center">
+                <Smartphone className="w-7 h-7 text-primary-foreground" />
               </div>
-              <h2 className="text-3xl font-display font-bold text-foreground">
-                Experience It on Your Phone
+              <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground text-center">
+                See It in Action
               </h2>
             </div>
-            <p className="text-muted-foreground mb-8 max-w-2xl">
-              Download the RivHeal app to start managing your healthcare in real-time. Available on iOS and Android.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6">
+
+            {/* Screenshots Grid */}
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
               {[
-                { title: "Book Appointments", desc: "Find the best time to visit your healthcare provider" },
-                { title: "Track Wait Times", desc: "Know exactly how long before you'll be seen" },
-                { title: "Access Medical Records", desc: "Your health history across all hospitals" },
-              ].map((item) => (
-                <div key={item.title} className="text-center">
-                  <div className="w-24 h-40 rounded-xl bg-muted mx-auto mb-4 flex items-center justify-center">
-                    <div className="text-sm text-muted-foreground">
-                      App screenshot
+                {
+                  image: "/images/mobile-app/home_page.png",
+                  title: "Dashboard",
+                  description: "Quick access to all your healthcare tools in one place",
+                },
+                {
+                  image: "/images/mobile-app/symptom-checker.png",
+                  title: "Symptom Checker",
+                  description: "Understand your symptoms and get guided to the right care",
+                },
+                {
+                  image: "/images/mobile-app/chat-assistant.png",
+                  title: "AI Health Assistant",
+                  description: "Get answers to your health questions 24/7",
+                },
+              ].map((item, idx) => (
+                <motion.div
+                  key={item.title}
+                  className="group"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                >
+                  <div className="relative rounded-2xl overflow-hidden bg-gradient-card border border-primary/10 shadow-soft hover:shadow-elevated transition-all duration-300">
+                    {/* Phone Frame */}
+                    <div className="aspect-[9/19] overflow-hidden bg-black rounded-[40px] border-8 border-gray-900 relative">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
                     </div>
+                    {/* Glass overlay on hover */}
+                    <div className="absolute inset-0 rounded-[40px] border-8 border-gray-900 pointer-events-none group-hover:bg-black/5 transition-colors" />
                   </div>
-                  <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.desc}</p>
-                </div>
+                  <h3 className="text-lg font-semibold text-foreground mt-5 mb-2 text-center">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground text-center">
+                    {item.description}
+                  </p>
+                </motion.div>
               ))}
             </div>
-            <p className="text-xs text-muted-foreground text-center mt-8">
-              Replace screenshot placeholders with mobile app images. See <code>/public/images/MOBILE_APP_IMAGES.md</code> for details.
-            </p>
+
+            {/* Features Grid Below Screenshots */}
+            <div className="bg-gradient-to-r from-primary/5 to-secondary/5 border border-primary/10 rounded-2xl p-8 md:p-12">
+              <h3 className="text-2xl font-display font-bold text-foreground mb-8 text-center">
+                What You Can Do
+              </h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  { Icon: Calendar, title: "Book Appointments", desc: "In seconds, with real-time availability" },
+                  { Icon: Clock, title: "Track Wait Times", desc: "Know exactly when to go" },
+                  { Icon: FileText, title: "Medical Records", desc: "All your health data in one place" },
+                  { Icon: AlertCircle, title: "Symptom Checker", desc: "Understand your health concerns" },
+                  { Icon: Video, title: "Telemedicine", desc: "Connect with doctors remotely" },
+                  { Icon: Heart, title: "Health Insights", desc: "Personalized wellness guidance" },
+                ].map((feature) => (
+                  <div key={feature.title} className="flex gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
+                        <feature.Icon size={20} className="text-primary-foreground" />
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-1">{feature.title}</h4>
+                      <p className="text-sm text-muted-foreground">{feature.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Download CTA - Pre-launch */}
+            <div className="mt-12 text-center">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 text-secondary text-sm font-medium mb-6">
+                <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
+                Coming Soon
+              </div>
+              <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+                RivHeal is launching soon on iOS and Android. Join our waitlist to get early access and be notified when we launch.
+              </p>
+              <Link
+                href="/home-care-waitlist"
+                className="inline-block px-8 py-3 rounded-xl font-semibold bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity"
+              >
+                Join Early Access Waitlist
+              </Link>
+            </div>
           </motion.div>
 
           {/* Why Choose Section */}
