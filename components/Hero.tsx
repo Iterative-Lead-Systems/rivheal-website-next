@@ -16,13 +16,13 @@ export default function Hero() {
 
         {/* Heading */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-foreground mb-6 leading-tight animate-fade-in-up">
-          Smarter Healthcare
-          <span className="block text-gradient-primary">In Your Hands</span>
+          Healthcare That Respects Your Time
+          <span className="block text-gradient-primary">Book. Track. Heal.</span>
         </h1>
 
         {/* Subtitle */}
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up">
-          Smart appointments. Real-time queue tracking. Portable medical records. All in one app designed for Nigerian patients. Be among the first to experience it.
+          Book appointments in seconds. See real-time wait times. Access your medical records from any hospital. Stop wasting time in waiting rooms. Be among the first to experience smarter healthcare.
         </p>
 
         {/* CTA Buttons */}

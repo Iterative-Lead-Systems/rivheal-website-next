@@ -7,25 +7,25 @@ const features = [
   {
     icon: Calendar,
     title: "Smart Appointment Booking",
-    description: "Find the best time to see your doctor. Know exactly when to go.",
+    description: "Book appointments with available slots across hospitals. Get reminders and reschedule easily from your phone.",
     accent: "primary",
   },
   {
     icon: Clock,
     title: "Real-Time Queue Tracking",
-    description: "See how long you'll wait before you go to the hospital",
+    description: "See exactly how long before you'll be seen. Check in online and skip the front desk lines.",
     accent: "secondary",
   },
   {
     icon: FileText,
     title: "Portable Medical Records",
-    description: "Your health data, your control, across all hospitals",
+    description: "Access lab results, prescriptions, and medical history from any hospital or clinic in Nigeria.",
     accent: "secondary",
   },
   {
     icon: Users,
-    title: "Health Guidance",
-    description: "Symptom guidance in your language when you need it",
+    title: "Health Guidance & Symptom Checker",
+    description: "Understand your symptoms before you visit. Get guidance on which department to visit and how urgent your care is.",
     accent: "primary",
   },
 ];

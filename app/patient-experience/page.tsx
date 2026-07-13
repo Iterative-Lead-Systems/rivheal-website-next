@@ -144,12 +144,14 @@ export default function PatientExperiencePage() {
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               {[
-                "No more wasted time in waiting rooms",
-                "Your health data, secured and private",
-                "Faster access to quality healthcare",
-                "Available 24/7 for your needs",
-                "Made for Nigerian patients",
-                "Empower yourself with health knowledge",
+                "Book appointments and skip waiting in lines",
+                "Check real-time wait times before you go",
+                "Access medical records from all hospitals in one place",
+                "Get symptom guidance instantly on your phone",
+                "Connect with doctors for home consultations",
+                "Track medication and wellness goals",
+                "Emergency access available 24/7",
+                "Your data is encrypted and private",
               ].map((reason) => (
                 <div key={reason} className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />

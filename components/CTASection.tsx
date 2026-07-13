@@ -23,14 +23,17 @@ export default function CTASection() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/patient"
+                href="/home-care-waitlist"
                 className="px-8 py-4 rounded-xl text-base font-semibold bg-gradient-warm text-primary-foreground hover:opacity-90 transition-opacity shadow-elevated"
               >
-                Get Started Free
+                Join the Waitlist
               </Link>
-              <button className="px-8 py-4 rounded-xl text-base font-semibold border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:border-primary-foreground/50 transition-colors">
-                Schedule a Demo
-              </button>
+              <Link
+                href="/request-demo"
+                className="px-8 py-4 rounded-xl text-base font-semibold border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:border-primary-foreground/50 transition-colors"
+              >
+                For Healthcare Providers
+              </Link>
             </div>
           </div>
         </motion.div>
