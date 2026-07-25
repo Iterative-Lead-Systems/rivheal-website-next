@@ -11,7 +11,7 @@ export default function Hero() {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 animate-fade-in">
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          Coming Soon
+          Now Available
         </div>
 
         {/* Heading */}
@@ -22,16 +22,16 @@ export default function Hero() {
 
         {/* Subtitle */}
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up">
-          Book appointments in seconds. See real-time wait times. Access your medical records from any hospital. Stop wasting time in waiting rooms. Be among the first to experience smarter healthcare.
+          Book appointments in seconds. See real-time wait times. Access your medical records from any hospital. Stop wasting time in waiting rooms. Experience smarter healthcare today.
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up">
           <a
-            href="/home-care-waitlist"
+            href="#modules"
             className="px-8 py-4 rounded-xl text-base font-semibold bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity shadow-elevated"
           >
-            Join the Waitlist
+            Get Started
           </a>
           <a
             href="#modules"
@@ -43,7 +43,7 @@ export default function Hero() {
 
         {/* Social proof micro-copy */}
         <p className="mt-6 text-sm text-muted-foreground animate-fade-in">
-          Early access launching soon · No credit card required
+          Available now · No credit card required
         </p>
       </div>
 

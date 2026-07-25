@@ -10,8 +10,8 @@ import Link from "next/link";
 const features = [
   {
     icon: Clock,
-    title: "Smart Queue Management",
-    description: "See real-time wait times and book appointments strategically. Know exactly when to go so you spend less time waiting in hospitals.",
+    title: "Real-Time Queue Visibility",
+    description: "See exactly where you are in the queue with live updates. Monitor your position, estimated wait time, and get notified when you're next.",
   },
   {
     icon: FileText,
@@ -20,23 +20,23 @@ const features = [
   },
   {
     icon: Share2,
-    title: "Improved Healthcare Access",
-    description: "Smart appointment booking connects you with the right healthcare provider at the right time, removing barriers to care.",
+    title: "Smart Appointment Booking",
+    description: "Intelligent appointment scheduling that finds the best time for you. Reduce wait times and get seen faster with predictive analytics.",
   },
   {
     icon: Users,
     title: "Active Participant in Your Care",
-    description: "Take control of your health journey. Track your care, understand your treatments, and make informed decisions about your health.",
+    description: "Take control of your health journey. Track treatments in real-time, access doctor's notes, ask questions, and make informed health decisions with your medical team.",
   },
   {
     icon: Stethoscope,
-    title: "Tele-Consultation",
-    description: "Access quality healthcare from the comfort of your home. Connect with doctors via secure video consultations.",
+    title: "Secure Tele-Consultation",
+    description: "Connect with your doctor from anywhere. Access quality healthcare without leaving home through secure, encrypted video consultations.",
   },
   {
     icon: Activity,
-    title: "Health Insights",
-    description: "Get symptom guidance and personalized health insights in your language. Understand your health better and when to seek professional care.",
+    title: "Personalized Health Guidance",
+    description: "Get AI-powered symptom assessment and health insights in your language. Understand your symptoms and receive guidance on next steps.",
   },
 ];
 
@@ -188,22 +188,6 @@ export default function PatientExperiencePage() {
               </div>
             </div>
 
-            {/* Download CTA - Pre-launch */}
-            <div className="mt-12 text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 text-secondary text-sm font-medium mb-6">
-                <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-                Coming Soon
-              </div>
-              <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-                RivHeal is launching soon on iOS and Android. Join our waitlist to get early access and be notified when we launch.
-              </p>
-              <Link
-                href="/home-care-waitlist"
-                className="inline-block px-8 py-3 rounded-xl font-semibold bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity"
-              >
-                Join Early Access Waitlist
-              </Link>
-            </div>
           </motion.div>
 
           {/* Why Choose Section */}
@@ -218,14 +202,14 @@ export default function PatientExperiencePage() {
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               {[
-                "Book appointments and skip waiting in lines",
-                "Check real-time wait times before you go",
-                "Access medical records from all hospitals in one place",
-                "Get symptom guidance instantly on your phone",
-                "Connect with doctors for home consultations",
-                "Track medication and wellness goals",
-                "Emergency access available 24/7",
-                "Your data is encrypted and private",
+                "📍 Real-time queue tracking — see exactly where you are",
+                "⏱️ Live wait time updates — know before you go",
+                "📋 Medical records in one place — access all your health data",
+                "🤖 AI symptom checker — understand your symptoms instantly",
+                "📞 Telemedicine — consult doctors from home 24/7",
+                "💬 Active communication with doctors — ask questions anytime",
+                "🏥 Multi-hospital access — continuity of care everywhere",
+                "🔒 Bank-level encryption — your privacy is protected",
               ].map((reason) => (
                 <div key={reason} className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
@@ -246,13 +230,13 @@ export default function PatientExperiencePage() {
               Ready to Transform Your Healthcare?
             </h2>
             <p className="text-primary-foreground/80 text-lg max-w-xl mx-auto mb-8">
-              Be among the first Nigerians to experience a smarter, faster healthcare system. Join our waitlist for early access.
+              Join thousands of Nigerians already experiencing smarter, faster healthcare with RivHeal.
             </p>
             <Link
-              href="/home-care-waitlist"
+              href="/request-demo"
               className="inline-block px-8 py-4 rounded-xl text-base font-semibold bg-gradient-warm text-primary-foreground hover:opacity-90 transition-opacity shadow-elevated"
             >
-              Join the Waitlist Today →
+              Get Started Today →
             </Link>
           </motion.div>
         </div>

@@ -45,7 +45,7 @@ const modules = [
     image: "/images/solutions/home-care.png",
     alt: "Home care nurse visiting a patient at home through RivHeal platform",
     accent: "bg-primary/10 text-primary",
-    href: "/home-care-waitlist",
+    href: "/request-demo",
     isClickable: true,
   },
 ];
@@ -107,11 +107,6 @@ export default function Modules() {
                   )}
                 </div>
                 <p className="text-muted-foreground text-sm leading-relaxed">{module.description}</p>
-                {module.comingSoon && (
-                  <div className="mt-4 inline-block px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-medium">
-                    Coming Soon
-                  </div>
-                )}
               </>
             );
 

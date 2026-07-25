@@ -51,10 +51,10 @@ export default function Header() {
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
           <Link
-            href="/home-care-waitlist"
+            href="/request-demo"
             className="px-5 py-2.5 rounded-xl text-sm font-semibold bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity shadow-soft"
           >
-            Join Waitlist
+            Get Started
           </Link>
         </div>
 
