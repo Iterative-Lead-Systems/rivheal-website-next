@@ -1,3 +1,4 @@
+// app/robots.ts
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
@@ -5,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/patients", "/appointments", "/dashboard"], // adjust to your app routes
+      disallow: ["/api/", "/login", "/dashboard"], // add your private routes
     },
     sitemap: "https://rivheal.com/sitemap.xml",
   };

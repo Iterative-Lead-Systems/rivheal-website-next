@@ -1,56 +1,26 @@
-import { MetadataRoute } from "next";
+// app/sitemap.ts
+import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://rivheal.com";
-  const routes = [
+  const base = "https://rivheal.com";
+  return [
     {
-      path: "/",
-      priority: 1.0,
-      freq: "weekly" as const,
-      lastModified: "2026-10-12",
+      url: `${base}/`,
+      lastModified: "2026-10-17",
+      changeFrequency: "weekly",
+      priority: 1,
     },
     {
-      path: "/emr",
-      priority: 0.9,
-      freq: "monthly" as const,
-      lastModified: "2026-10-12",
-    },
-    {
-      path: "/patient-portal",
-      priority: 0.9,
-      freq: "monthly" as const,
-      lastModified: "2026-10-12",
-    },
-    {
-      path: "/request-demo",
-      priority: 0.9,
-      freq: "monthly" as const,
-      lastModified: "2026-10-12",
-    },
-    {
-      path: "/contact",
+      url: `${base}/request-demo`,
+      lastModified: "2026-10-17",
+      changeFrequency: "monthly",
       priority: 0.8,
-      freq: "monthly" as const,
-      lastModified: "2026-10-12",
     },
     {
-      path: "/privacy",
-      priority: 0.4,
-      freq: "yearly" as const,
-      lastModified: "2026-10-12",
-    },
-    {
-      path: "/terms",
-      priority: 0.4,
-      freq: "yearly" as const,
-      lastModified: "2026-10-12",
+      url: `${base}/contact`,
+      lastModified: "2026-10-17",
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
   ];
-
-  return routes.map(({ path, priority, freq, lastModified }) => ({
-    url: `${baseUrl}${path}`,
-    lastModified,
-    changeFrequency: freq,
-    priority,
-  }));
 }
