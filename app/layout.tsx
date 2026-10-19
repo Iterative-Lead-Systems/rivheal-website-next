@@ -20,24 +20,24 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL("https://rivheal.com"),
   title: {
-    default: "RivHeal | Electronic Medical Records and Patient Management",
+    default: "RivHeal | Healthcare Technology and Infrastructure",
     template: "%s | RivHeal",
   },
   description:
-    "RivHeal helps healthcare facilities manage patient records, consultations, billing, pharmacy, laboratory, radiology and other healthcare workflows in one platform.",
+    "Discover RivHeal, a healthcare technology platform building connected experiences for healthcare providers and patients.",
   authors: [{ name: "RivHeal" }],
   creator: "RivHeal",
   openGraph: {
     type: "website",
     locale: "en_NG",
-    url: "https://rivheal.com",
+    url: "https://rivheal.com/",
     siteName: "RivHeal",
-    title: "RivHeal | Electronic Medical Records and Patient Management",
+    title: "RivHeal | Healthcare Technology and Infrastructure",
     description:
-      "RivHeal helps healthcare facilities manage patient records, consultations, billing, pharmacy, laboratory, radiology and other healthcare workflows in one platform.",
+      "Explore RivHeal's approach to connected healthcare technology, patient management, and healthcare infrastructure.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/rivheal.png",
         width: 1200,
         height: 630,
         alt: "RivHeal Healthcare Platform",
@@ -46,10 +46,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "RivHeal | Electronic Medical Records and Patient Management",
+    title: "RivHeal | Healthcare Technology and Infrastructure",
     description:
-      "Manage patient records, consultations, billing, pharmacy, laboratory and radiology in one platform.",
-    images: ["/og-image.png"],
+      "Discover RivHeal, a healthcare technology platform building connected experiences for healthcare providers and patients.",
+    images: ["/rivheal.png"],
     creator: "@rivheal",
   },
   robots: {

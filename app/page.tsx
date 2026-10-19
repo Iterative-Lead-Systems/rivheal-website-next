@@ -9,14 +9,14 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "RivHeal | Electronic Medical Records and Patient Management",
+  title: "RivHeal | Healthcare Technology and Infrastructure",
   description:
-    "RivHeal helps healthcare facilities manage patient records, consultations, billing, pharmacy, laboratory, radiology and other healthcare workflows in one platform.",
+    "Discover RivHeal, a healthcare technology platform building connected experiences for healthcare providers and patients.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "RivHeal | Electronic Medical Records and Patient Management",
+    title: "RivHeal | Healthcare Technology and Infrastructure",
     description:
-      "RivHeal helps healthcare facilities manage patient records, consultations, billing, pharmacy, laboratory, radiology and other healthcare workflows in one platform.",
+      "Discover RivHeal, a healthcare technology platform building connected experiences for healthcare providers and patients.",
     url: "/",
     siteName: "RivHeal",
     type: "website",
