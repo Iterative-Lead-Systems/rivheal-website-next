@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Outfit, Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "sonner";
@@ -19,34 +20,24 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL("https://rivheal.com"),
   title: {
-    default: "RivHeal — The Operating System for Nigerian Healthcare",
+    default: "RivHeal | Healthcare Technology and Infrastructure",
     template: "%s | RivHeal",
   },
   description:
-    "RivHeal digitizes the entire Nigerian healthcare journey — smart appointment booking, live queue tracking, digital medical records, telemedicine, and emergency network. Trusted by hospitals and patients across Nigeria.",
-  keywords: [
-    "healthcare Nigeria",
-    "hospital management",
-    "patient app Nigeria",
-    "telemedicine Nigeria",
-    "medical records Nigeria",
-    "appointment booking Nigeria",
-    "EMR Nigeria",
-    "RivHeal",
-  ],
+    "Discover RivHeal, a healthcare technology platform building connected experiences for healthcare providers and patients.",
   authors: [{ name: "RivHeal" }],
   creator: "RivHeal",
   openGraph: {
     type: "website",
     locale: "en_NG",
-    url: "https://rivheal.com",
+    url: "https://rivheal.com/",
     siteName: "RivHeal",
-    title: "RivHeal — The Operating System for Nigerian Healthcare",
+    title: "RivHeal | Healthcare Technology and Infrastructure",
     description:
-      "Smart appointments, live queue tracking, digital records, telemedicine & emergency network — all in one platform.",
+      "Explore RivHeal's approach to connected healthcare technology, patient management, and healthcare infrastructure.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/rivheal.png",
         width: 1200,
         height: 630,
         alt: "RivHeal Healthcare Platform",
@@ -55,10 +46,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "RivHeal — Nigerian Healthcare Platform",
+    title: "RivHeal | Healthcare Technology and Infrastructure",
     description:
-      "Smart appointments, live queue, digital records & emergency network for Nigeria.",
-    images: ["/og-image.png"],
+      "Discover RivHeal, a healthcare technology platform building connected experiences for healthcare providers and patients.",
+    images: ["/rivheal.png"],
     creator: "@rivheal",
   },
   robots: {
@@ -82,18 +73,13 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "MedicalOrganization",
+  "@type": "Organization",
   name: "RivHeal",
-  description: "The Operating System for Nigerian Healthcare",
+  description:
+    "Healthcare management software for hospitals and clinics in Nigeria.",
   url: "https://rivheal.com",
   logo: "https://rivheal.com/rivheal.png",
   areaServed: { "@type": "Country", name: "Nigeria" },
-  serviceType: [
-    "Hospital Management",
-    "Patient Portal",
-    "Telemedicine",
-    "Emergency Network",
-  ],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer support",
@@ -114,7 +100,21 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${inter.variable} ${outfit.variable} font-sans antialiased`}>
+      <body
+        className={`${inter.variable} ${outfit.variable} font-sans antialiased`}
+      >
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-HR8CYX9E8N"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-HR8CYX9E8N');
+          `}
+        </Script>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

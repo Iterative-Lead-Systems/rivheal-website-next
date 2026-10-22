@@ -50,7 +50,15 @@ const modules = [
   },
 ];
 
-function SolutionImage({ src, alt, accent }: { src: string; alt: string; accent: string }) {
+function SolutionImage({
+  src,
+  alt,
+  accent,
+}: {
+  src: string;
+  alt: string;
+  accent: string;
+}) {
   return (
     <div className="relative w-full h-48 rounded-xl overflow-hidden mb-5 bg-muted">
       <Image
@@ -65,7 +73,9 @@ function SolutionImage({ src, alt, accent }: { src: string; alt: string; accent:
         }}
       />
       {/* Fallback shown under the image (visible when image fails/missing) */}
-      <div className={`absolute inset-0 flex items-center justify-center text-sm font-medium ${accent} -z-0`}>
+      <div
+        className={`absolute inset-0 flex items-center justify-center text-sm font-medium ${accent} -z-0`}
+      >
         {/* TODO: Replace with a real image — see public/images/solutions/IMAGES_NEEDED.md */}
         {/* Image coming soon */}
       </div>
@@ -87,7 +97,8 @@ export default function Modules() {
             Our Solutions
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            A complete ecosystem connecting patients with the care they need. For patients, hospitals, and emergency services.
+            A complete ecosystem connecting patients with the care they need.
+            For patients, hospitals, and emergency services.
           </p>
         </motion.div>
 
@@ -95,7 +106,11 @@ export default function Modules() {
           {modules.map((module, index) => {
             const cardContent = (
               <>
-                <SolutionImage src={module.image} alt={module.alt} accent={module.accent} />
+                <SolutionImage
+                  src={module.image}
+                  alt={module.alt}
+                  accent={module.accent}
+                />
                 <div className="flex items-start justify-between gap-2 mb-2">
                   <h3 className="text-xl font-display font-semibold text-foreground flex-1">
                     {module.title}
@@ -106,7 +121,9 @@ export default function Modules() {
                     </span>
                   )}
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed">{module.description}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {module.description}
+                </p>
               </>
             );
 
