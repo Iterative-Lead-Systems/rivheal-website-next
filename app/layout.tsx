@@ -5,6 +5,12 @@ import { ThemeProvider } from "next-themes";
 import { Toaster } from "sonner";
 import "./globals.css";
 
+declare global {
+  interface Window {
+    dataLayer?: Object[];
+  }
+}
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -89,7 +95,6 @@ const jsonLd = {
     availableLanguage: ["English", "Yoruba", "Hausa", "Igbo"],
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -100,9 +105,7 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(jsonLd),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
 
