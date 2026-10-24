@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Outfit, Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "sonner";
 import "./globals.css";
+
+declare global {
+  interface Window {
+    dataLayer?: Object[];
+  }
+}
 
 const inter = Inter({
   subsets: ["latin"],
@@ -79,19 +85,21 @@ const jsonLd = {
     "Healthcare management software for hospitals and clinics in Nigeria.",
   url: "https://rivheal.com",
   logo: "https://rivheal.com/rivheal.png",
-  areaServed: { "@type": "Country", name: "Nigeria" },
+  areaServed: {
+    "@type": "Country",
+    name: "Nigeria",
+  },
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer support",
     availableLanguage: ["English", "Yoruba", "Hausa", "Igbo"],
   },
 };
-
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -100,21 +108,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
+
       <body
         className={`${inter.variable} ${outfit.variable} font-sans antialiased`}
       >
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-HR8CYX9E8N"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-HR8CYX9E8N');
-          `}
-        </Script>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
@@ -124,6 +121,8 @@ export default function RootLayout({
           {children}
           <Toaster richColors position="top-right" />
         </ThemeProvider>
+
+        <GoogleAnalytics gaId="G-HR8CYX9E8N" />
       </body>
     </html>
   );
