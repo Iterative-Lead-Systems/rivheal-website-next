@@ -95,6 +95,9 @@ const jsonLd = {
     availableLanguage: ["English", "Yoruba", "Hausa", "Igbo"],
   },
 };
+
+const gaId = process.env.NEXT_PUBLIC_GA_ID;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -122,7 +125,7 @@ export default function RootLayout({
           <Toaster richColors position="top-right" />
         </ThemeProvider>
 
-        <GoogleAnalytics gaId="G-HR8CYX9E8N" />
+        {gaId && <GoogleAnalytics gaId={gaId} />}
       </body>
     </html>
   );
