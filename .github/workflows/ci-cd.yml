@@ -19,9 +19,9 @@ name: CI/CD — Website (Cloudflare Pages)
 
 on:
   push:
-    branches: [main2, develop2]
+    branches: [main, develop]
   pull_request:
-    branches: [main2, develop2]
+    branches: [main, develop]
 
 env:
   NODE_VERSION: "24"

@@ -5,12 +5,6 @@ import { ThemeProvider } from "next-themes";
 import { Toaster } from "sonner";
 import "./globals.css";
 
-declare global {
-  interface Window {
-    dataLayer?: Object[];
-  }
-}
-
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
