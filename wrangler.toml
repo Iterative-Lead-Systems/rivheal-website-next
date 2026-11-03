@@ -1,6 +1,12 @@
 name = "rivheal-website-next"
-compatibility_date = "2024-09-23"
+main = ".open-next/worker.js"
+compatibility_date = "2026-11-03"
 compatibility_flags = ["nodejs_compat"]
+upload_source_maps = true
 
-# @cloudflare/next-on-pages outputs here
-pages_build_output_dir = ".vercel/output/static"
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+[observability]
+enabled = true

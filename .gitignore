@@ -8,8 +8,9 @@ node_modules/
 .next/
 out/
 
-# ── Cloudflare / next-on-pages build output ──────────────────
+# ── Cloudflare build output ──────────────────────────────────
 .vercel/
+.open-next/
 .wrangler/
 .dev.vars
 
