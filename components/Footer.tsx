@@ -7,6 +7,7 @@ const footerLinks = [
   { label: "Solutions", href: "/#modules" },
   { label: "Contact", href: "/contact" },
   { label: "Privacy", href: "/privacy" },
+  { label: "Delete Account", href: "/delete-account" },
   { label: "Terms", href: "/terms" },
 ];
 
