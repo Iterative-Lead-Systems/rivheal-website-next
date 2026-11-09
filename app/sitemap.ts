@@ -6,19 +6,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: `${base}/`,
-      lastModified: "2026-10-17",
+      lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
     },
     {
       url: `${base}/request-demo`,
-      lastModified: "2026-10-17",
+      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${base}/contact`,
-      lastModified: "2026-10-17",
+      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
