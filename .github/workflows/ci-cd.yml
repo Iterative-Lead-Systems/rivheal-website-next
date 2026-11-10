@@ -1,35 +1,17 @@
-# ─────────────────────────────────────────────────────────────
-# RivHeal Website (Next.js) — CI/CD
-# File: rivheal-website-next/.github/workflows/ci-cd.yml
-#
-# PR             → typecheck + build + Cloudflare preview URL (auto comment)
-# develop branch → build (staging vars) → deploy to CF Pages staging
-# main branch    → build (prod vars)    → deploy to CF Pages production (manual approval)
-#
-# GitHub Secrets (repo Settings → Secrets → Actions):
-#   CLOUDFLARE_API_TOKEN    CF API token with "Cloudflare Pages: Edit" permission
-#   CLOUDFLARE_ACCOUNT_ID   Your Cloudflare account ID
-#
-# GitHub Variables (repo Settings → Variables → Actions):
-#   STAGING_API_URL         https://api-staging.rivheal.com/api/v1
-#   PROD_API_URL            https://api.rivheal.com/api/v1
-#   CF_PAGES_PROJECT_NAME   rivheal-website
-# ─────────────────────────────────────────────────────────────
-name: CI/CD — Website (Cloudflare Pages)
+name: CI — Website (Cloudflare Workers)
 
 on:
   push:
-    branches: [main2, develop2]
+    branches: [main, develop]
   pull_request:
-    branches: [main2, develop2]
+    branches: [main, develop]
 
 env:
   NODE_VERSION: "24"
 
 jobs:
-  # ── 1. Type Check ───────────────────────────────────────────
-  typecheck:
-    name: Type Check & Lint
+  validate:
+    name: Type Check, Lint & Workers Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -42,24 +24,29 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Set preview environment
+        if: github.event_name == 'pull_request'
+        run: echo "NEXT_PUBLIC_API_URL=${{ vars.STAGING_API_URL }}" >> $GITHUB_ENV
+
+      - name: Set staging environment
+        if: github.ref == 'refs/heads/develop'
+        run: echo "NEXT_PUBLIC_API_URL=${{ vars.STAGING_API_URL }}" >> $GITHUB_ENV
+
+      - name: Set production environment
+        if: github.ref == 'refs/heads/main'
+        run: echo "NEXT_PUBLIC_API_URL=${{ vars.PROD_API_URL }}" >> $GITHUB_ENV
+
       - name: TypeScript check
         run: npx tsc --noEmit
 
       - name: ESLint
         run: npm run lint
 
-  # ── 2. Build ────────────────────────────────────────────────
-  build:
-    name: Build (Cloudflare Pages)
-    runs-on: ubuntu-latest
-    needs: typecheck
-    steps:
-      - uses: actions/checkout@v4
+      - name: Build Cloudflare Worker
+        run: npm run build
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: "npm"
+      - name: Verify Worker artifact
+        run: test -f .open-next/worker.js
 
       - name: Install dependencies
         run: npm ci
@@ -178,3 +165,6 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy .vercel/output/static --project-name=${{ vars.CF_PAGES_PROJECT_NAME }} --branch=main
+# Cloudflare Workers Builds is connected directly to this repository and owns
+# preview/production uploads. Keeping deployment out of GitHub Actions avoids
+# duplicate uploads and Pages-vs-Workers configuration drift.

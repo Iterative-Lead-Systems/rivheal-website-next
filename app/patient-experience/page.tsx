@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Clock, FileText, Users, Stethoscope, Activity, Share2, CheckCircle, Smartphone, Calendar, AlertCircle, BookOpen, MessageSquare, Video, Heart } from "lucide-react";
+import { Clock, FileText, Users, Stethoscope, Activity, Share2, CheckCircle, Smartphone, Calendar, AlertCircle, Video, Heart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 

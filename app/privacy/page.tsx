@@ -76,7 +76,7 @@ All third parties are contractually bound to process your data solely for specif
 - **Objection** to processing based on legitimate interests.
 - **Withdraw consent** at any time (without affecting prior lawful processing).
 
-To exercise any right, email **privacy@rivheal.com**. We will respond within 30 days.`,
+To request account and data deletion, use **rivheal.com/delete-account**. For other privacy rights, email **privacy@rivheal.com**. We will respond within 30 days.`,
   },
   {
     title: "9. Security",
