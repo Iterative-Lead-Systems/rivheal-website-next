@@ -69,21 +69,21 @@ jobs:
         run: |
           echo "NEXT_PUBLIC_API_URL=${{ vars.STAGING_API_URL }}"            >> $GITHUB_ENV
           echo "NEXT_PUBLIC_APP_VERSION=sha-$(git rev-parse --short HEAD)"  >> $GITHUB_ENV
-          echo "NEXT_NEXT_PUBLIC_GA_ID=${{ vars.NEXT_PUBLIC_GA_ID}}"        >> $GITHUB_ENV
+          echo "NEXT_PUBLIC_GA_ID=${{ vars.NEXT_PUBLIC_GA_ID}}"        >> $GITHUB_ENV
 
       - name: Set env — main (production)
         if: github.ref == 'refs/heads/main'
         run: |
           echo "NEXT_PUBLIC_API_URL=${{ vars.PROD_API_URL }}"               >> $GITHUB_ENV
           echo "NEXT_PUBLIC_APP_VERSION=sha-$(git rev-parse --short HEAD)"  >> $GITHUB_ENV
-          echo "NEXT_NEXT_PUBLIC_GA_ID=${{ vars.NEXT_PUBLIC_GA_ID}}"        >> $GITHUB_ENV
+          echo "NEXT_PUBLIC_GA_ID=${{ vars.NEXT_PUBLIC_GA_ID}}"        >> $GITHUB_ENV
 
       - name: Set env — PR (preview)
         if: github.event_name == 'pull_request'
         run: |
           echo "NEXT_PUBLIC_API_URL=${{ vars.STAGING_API_URL }}"            >> $GITHUB_ENV
           echo "NEXT_PUBLIC_APP_VERSION=pr-${{ github.event.number }}"      >> $GITHUB_ENV
-          echo "NEXT_NEXT_PUBLIC_GA_ID=${{ vars.NEXT_PUBLIC_GA_ID}}"        >> $GITHUB_ENV
+          echo "NEXT_PUBLIC_GA_ID=${{ vars.NEXT_PUBLIC_GA_ID}}"        >> $GITHUB_ENV
 
       - name: Build for Cloudflare Pages
         run: npm run pages:build
